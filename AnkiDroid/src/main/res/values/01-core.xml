@@ -80,6 +80,9 @@
     <string name="menu_create_backup" maxLength="28">Create backup</string>
     <string name="speedrun_memory" translatable="false">Speedrun: Memory</string>
     <string name="speedrun_home" translatable="false">Speedrun: Home</string>
+    <string name="speedrun_import_exam_deck" translatable="false">Import the GRE exam deck to start a run</string>
+    <string name="speedrun_all_caught_up" translatable="false">All caught up for today</string>
+    <string name="speedrun_custom_study" translatable="false">Custom Study</string>
     <string name="new_dynamic_deck">Create filtered deck</string>
     <string name="directory_inaccessible">AnkiDroid directory is inaccessible</string>
     <!--This is shown when AnkiDroid starts up with no storage permissions.
