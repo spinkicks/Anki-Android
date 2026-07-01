@@ -30,12 +30,16 @@ import com.ichi2.anki.importCsvRaw
 import com.ichi2.anki.launchCatchingTask
 import com.ichi2.anki.libanki.Collection
 import com.ichi2.anki.libanki.completeTagRaw
+import com.ichi2.anki.libanki.getCoverageRaw
 import com.ichi2.anki.libanki.getCsvMetadataRaw
 import com.ichi2.anki.libanki.getDeckConfigsForUpdateRaw
 import com.ichi2.anki.libanki.getDeckNamesRaw
+import com.ichi2.anki.libanki.getExamProfileRaw
 import com.ichi2.anki.libanki.getFieldNamesRaw
 import com.ichi2.anki.libanki.getImportAnkiPackagePresetsRaw
 import com.ichi2.anki.libanki.getNotetypeNamesRaw
+import com.ichi2.anki.libanki.getPerformanceReadinessRaw
+import com.ichi2.anki.libanki.getTopicMasteryRaw
 import com.ichi2.anki.libanki.sched.computeFsrsParamsRaw
 import com.ichi2.anki.libanki.sched.computeOptimalRetentionRaw
 import com.ichi2.anki.libanki.sched.simulateFsrsReviewRaw
@@ -130,6 +134,11 @@ val collectionMethods =
         "simulateFsrsWorkload" to { bytes -> simulateFsrsWorkloadRaw(bytes) },
         // https://github.com/ankitects/anki/pull/4326 -> saveCustomColours should be no-op in mobile clients
         "saveCustomColours" to { bytes -> backendIdentity(bytes) },
+        // Speedrun "Memory" dashboard read-only RPCs (mutating reorderNewByPointsAtStake is not wired)
+        "getCoverage" to { bytes -> getCoverageRaw(bytes) },
+        "getTopicMastery" to { bytes -> getTopicMasteryRaw(bytes) },
+        "getExamProfile" to { bytes -> getExamProfileRaw(bytes) },
+        "getPerformanceReadiness" to { bytes -> getPerformanceReadinessRaw(bytes) },
     )
 
 suspend fun handleCollectionPostRequest(

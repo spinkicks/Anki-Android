@@ -95,6 +95,7 @@ import com.ichi2.anki.common.android.appContext
 import com.ichi2.anki.common.annotations.NeedsTest
 import com.ichi2.anki.common.crashreporting.CrashReportService
 import com.ichi2.anki.common.destinations.PreferencesDestination
+import com.ichi2.anki.common.destinations.SpeedrunMemoryDestination
 import com.ichi2.anki.common.destinations.navigate
 import com.ichi2.anki.common.preferences.sharedPrefs
 import com.ichi2.anki.common.time.TimeManager
@@ -1353,6 +1354,11 @@ open class DeckPicker :
             R.id.action_create_backup -> {
                 Timber.i("DeckPicker::Create backup")
                 createBackup()
+                return true
+            }
+            R.id.action_speedrun_memory -> {
+                Timber.i("DeckPicker:: Speedrun Memory button pressed")
+                navigate(SpeedrunMemoryDestination)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)
