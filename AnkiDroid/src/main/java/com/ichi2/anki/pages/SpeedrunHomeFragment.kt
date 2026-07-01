@@ -27,5 +27,6 @@ class SpeedrunHomeFragment : PageFragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<MaterialToolbar>(R.id.toolbar)?.setTitle(R.string.speedrun_home)
+        applySpeedrunDarkShell(view)
     }
 }

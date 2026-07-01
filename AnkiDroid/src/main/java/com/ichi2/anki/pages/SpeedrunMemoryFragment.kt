@@ -23,5 +23,6 @@ class SpeedrunMemoryFragment : PageFragment() {
     ) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<MaterialToolbar>(R.id.toolbar)?.setTitle(R.string.speedrun_memory)
+        applySpeedrunDarkShell(view)
     }
 }

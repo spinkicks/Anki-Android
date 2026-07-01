@@ -76,5 +76,8 @@
     <color name="idle_divider_color">#C7C7C7</color>
     <color name="drag_divider_color">#1A90FF</color>
     <color name="divider_handle_color">#4D4D4D</color>
+
+    <!-- Speedrun shell: near-black background matching "The Run" SvelteKit page (#0B0E12) -->
+    <color name="speedrun_shell_bg">#FF0B0E12</color>
 </resources>
 
