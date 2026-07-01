@@ -95,6 +95,7 @@ import com.ichi2.anki.common.android.appContext
 import com.ichi2.anki.common.annotations.NeedsTest
 import com.ichi2.anki.common.crashreporting.CrashReportService
 import com.ichi2.anki.common.destinations.PreferencesDestination
+import com.ichi2.anki.common.destinations.SpeedrunHomeDestination
 import com.ichi2.anki.common.destinations.SpeedrunMemoryDestination
 import com.ichi2.anki.common.destinations.navigate
 import com.ichi2.anki.common.preferences.sharedPrefs
@@ -1359,6 +1360,11 @@ open class DeckPicker :
             R.id.action_speedrun_memory -> {
                 Timber.i("DeckPicker:: Speedrun Memory button pressed")
                 navigate(SpeedrunMemoryDestination)
+                return true
+            }
+            R.id.action_speedrun_home -> {
+                Timber.i("DeckPicker:: Speedrun Home button pressed")
+                navigate(SpeedrunHomeDestination)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

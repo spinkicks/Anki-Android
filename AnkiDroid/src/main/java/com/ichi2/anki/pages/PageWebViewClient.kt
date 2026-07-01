@@ -123,6 +123,7 @@ fun isSvelteKitPage(path: String): Boolean {
         "import-page",
         "image-occlusion",
         "speedrun-memory",
+        "speedrun-home",
         -> true
         else -> false
     }

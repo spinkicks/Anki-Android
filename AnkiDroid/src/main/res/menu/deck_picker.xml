@@ -70,4 +70,8 @@
         android:id="@+id/action_speedrun_memory"
         android:menuCategory="secondary"
         android:title="@string/speedrun_memory"/>
+    <item
+        android:id="@+id/action_speedrun_home"
+        android:menuCategory="secondary"
+        android:title="@string/speedrun_home"/>
 </menu>

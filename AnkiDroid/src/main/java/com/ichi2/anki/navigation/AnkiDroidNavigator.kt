@@ -12,6 +12,7 @@ import com.ichi2.anki.common.destinations.DeckOptionsDestination
 import com.ichi2.anki.common.destinations.Destination
 import com.ichi2.anki.common.destinations.Navigator
 import com.ichi2.anki.common.destinations.PreferencesDestination
+import com.ichi2.anki.common.destinations.SpeedrunHomeDestination
 import com.ichi2.anki.common.destinations.SpeedrunMemoryDestination
 import com.ichi2.anki.common.destinations.StatisticsDestination
 import com.ichi2.anki.pages.toIntent
@@ -32,6 +33,7 @@ object AnkiDroidNavigator : Navigator {
             is CsvImporterDestination -> destination.toIntent(navContext)
             is DeckOptionsDestination -> destination.toIntent(navContext)
             is PreferencesDestination -> destination.toIntent(navContext)
+            is SpeedrunHomeDestination -> destination.toIntent(navContext)
             is SpeedrunMemoryDestination -> destination.toIntent(navContext)
             is StatisticsDestination -> destination.toIntent(navContext)
         }
