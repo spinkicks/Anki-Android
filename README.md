@@ -1,3 +1,8 @@
+<!-- SPEEDRUN FORK NOTE -->
+> **This is a fork used by the Speedrun project** — an honest GRE Mathematics Subject Test trainer built **on Anki/AnkiDroid** (desktop + Android sharing one Rust engine). Speedrun's Android screens (Home + Memory) render shared SvelteKit pages via `PageFragment` (`AnkiDroid/src/main/java/com/ichi2/anki/pages/Speedrun*`); the engine change lives in the `spinkicks/anki` fork's `rslib/src/speedrun/`. Project hub: `spinkicks/speedrun`. All credit for AnkiDroid goes to the AnkiDroid team; the original README follows.
+
+---
+
 <p align="center">
 <img alt="" src="docs/graphics/logos/banner_readme.png"/>
 </p>
