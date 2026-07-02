@@ -122,10 +122,16 @@ class SpeedrunHomeFragment : PageFragment() {
             // 3. Build/refresh the filtered deck via the backend (undo-safe op).
             val did =
                 withCol {
+                    // Reuse the existing mock deck if present so re-taps UPDATE it in
+                    // place. With id=0 the backend always CREATES a new deck and
+                    // auto-suffixes on the name collision ("Speedrun Mini-Mock+1", …),
+                    // orphaning decks and stranding cards; resolving by name first
+                    // avoids that (mirrors the desktop bug #6 fix).
+                    val existingId = decks.idForName(MINI_MOCK_DECK_NAME)
                     val update =
                         filteredDeckForUpdate {
-                            // backend uses 0 to mean "create a new filtered deck"
-                            id = 0
+                            // reuse existing → update in place; 0 → create new
+                            id = existingId ?: 0L
                             name = MINI_MOCK_DECK_NAME
                             config =
                                 filtered {
